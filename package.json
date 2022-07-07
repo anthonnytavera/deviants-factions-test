@@ -1,0 +1,25 @@
+{
+  "name": "deviants-factions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/boom": "^9.1.4",
+    "express": "^4.17.2",
+    "joi": "^17.4.2",
+    "log4js": "^6.4.1",
+    "dotenv": "^8.6.0",
+    "bluebird": "^3.7.2",
+    "sqlite3": "^5.0.6"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
