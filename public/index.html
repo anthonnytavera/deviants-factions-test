@@ -243,7 +243,7 @@
                                 type: "POST",
                                 url: API_ENDPOINT + `/api/v1/user/`,
                                 contentType: 'application/json',
-                                data: JSON.stringify({"name":element.name, "credits": element.credit, "number_play": element.number_play }),
+                                data: JSON.stringify({"name":element.name, "credits": element.credits, "number_play": element.number_play }),
                             }); 
                         });
 
@@ -359,7 +359,7 @@
 
         $("#spin").click(function() {
             number_play = number_play - 1;
-            console.log(number_play);
+            
             if (number_play <= 0) {
                 $("#spin").attr("disabled", true);
             } else {
@@ -543,7 +543,7 @@
                                             type: "PATCH",
                                             url: API_ENDPOINT + `/api/v1/user-rewards/${res.id}`,
                                             contentType: 'application/json',
-                                            data: JSON.stringify({"amount": parseInt(item.amount) + parseInt(params[1])}),
+                                            data: JSON.stringify({"amount": parseInt(res.amount) + parseInt(params[1])}),
                                             success: function(res){
                                                 $.ajax({
                                                     url: API_ENDPOINT + `/api/v1/user-rewards/user/${user}`,
